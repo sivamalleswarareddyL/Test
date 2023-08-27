@@ -1,0 +1,711 @@
+{
+	"info": {
+		"_postman_id": "f7e1fefe-20de-4ab9-af00-09f6220a9845",
+		"name": "Geofence2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "29071784-f7e1fefe-20de-4ab9-af00-09f6220a9845"
+	},
+	"item": [
+		{
+			"name": "Get All geofences",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "6b3de258-d2d0-459d-8587-de3bb97eac5f"
+					}
+				}
+			],
+			"id": "5c6af921-2461-49c8-b1bc-2c5d9c12bae3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/geofences",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"geofences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All geofences - live projects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "3c6df118-a190-438b-9150-1947c288da24"
+					}
+				}
+			],
+			"id": "958b171b-301f-4980-8d1d-d67dafbad5e5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/geofences/live-projects",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"geofences",
+						"live-projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create geofences",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"id": "804397e5-16c0-49a4-b27c-05194443dedb"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"const jsonDate = pm.response.json()\r",
+							"pm.test(\"Test data type of the response\",function () {\r",
+							"pm.expect(jsonDate.name).to.be.a(\"String\");\r",
+							"pm.expect(jsonDate.id).to.be.a(\"number\");\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    var jsonDate = pm.response.json()\r",
+							"    pm.collectionVariables.set(\"Geo_id\", jsonDate.id);\r",
+							"\r",
+							"\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "fb6e935a-7124-4bdf-b58f-d41ac73a540c"
+					}
+				}
+			],
+			"id": "d720ab00-7bff-4f3b-9b10-e0f54ac71741",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{$randomCity}}\",\r\n    \"id\": \"{{$randomInt}}\",\r\n    \"coordinates\": [\r\n        [\r\n            11.024702799921199,\r\n            77.01062037960213\r\n        ],\r\n        [\r\n            11.02471759541242,\r\n            77.01779322541657\r\n        ],\r\n        [\r\n           11.037592095829547,\r\n            77.03721406552525\r\n        ],\r\n        [\r\n               11.024702799921199,\r\n            77.01062037960213\r\n        ]\r\n        \r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/geofences",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"geofences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get geofences By Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "1cf65615-bb9f-4ce5-8bc9-63bcb69cf4c4"
+					}
+				}
+			],
+			"id": "c70fa904-a3fb-4bb6-9b2e-70a580316b74",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "text"
+					},
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/geofences/{{Geo_id}}",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"geofences",
+						"{{Geo_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update geofences",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "3c9cc3ca-3d86-471d-b1e4-727658d06cf9"
+					}
+				}
+			],
+			"id": "72d20e61-5d65-40a7-ad60-998fb47729f8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{$randomCity}}\",\r\n    \r\n    \"coordinates\": [\r\n        [\r\n            11.024702799921199,\r\n            77.01062037960213\r\n        ],\r\n        [\r\n            11.02471759541242,\r\n            77.01779322541657\r\n        ],\r\n        [\r\n           11.037592095829547,\r\n            77.03721406552525\r\n        ],\r\n        [\r\n               11.024702799921199,\r\n            77.01062037960213\r\n        ]\r\n        \r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/geofences/{{Geo_id}}",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"geofences",
+						"{{Geo_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Asset",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 5000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "ec7bb0da-a9e8-49d9-977a-e3464f1b1204"
+					}
+				}
+			],
+			"id": "4f0e6fc2-f992-475e-9057-9f383fe5ec90",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/assets",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Asset",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							" \r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"id": "97fa589c-94fc-4a49-96b7-65c4348186cf"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    var jsonDate = pm.response.json()\r",
+							"    pm.collectionVariables.set(\"Asset_id\", jsonDate.id);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"id": "54b6670c-05f6-4162-9de4-27263ec74a20"
+					}
+				}
+			],
+			"id": "d5c2ecf1-2ed8-4e5a-9105-221500e4d142",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"code\":\"{{$randomCurrencyCode}}\",\r\n   \"deviceCode\":\"{{$randomInt}}\",\r\n   \"type\":\"Agri1234\",\r\n   \"status\":\"Ready\",\r\n   \"geofenceId\":\"{{Geo_id}}\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/assets",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Asset By Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "82af37da-be3c-465a-b036-490b7c74b0e1"
+					}
+				}
+			],
+			"id": "7bc9087d-7437-43da-b2c9-cec6a33cd88b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "text"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/assets/{{Asset_id}}",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"assets",
+						"{{Asset_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Asset",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "8adef420-7d82-453d-9f9d-c5d01ec5ee4b"
+					}
+				}
+			],
+			"id": "ee9699ca-398f-4189-9f01-903f8f0de896",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n   \"code\":\"{{$randomCurrencyCode}}\",\r\n   \"deviceCode\":\"{{$randomInt}}\",\r\n   \"type\":\"Agri1234\",\r\n   \"status\":\"Ready\",\r\n   \"geofenceId\":\"{{Geo_id}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/assets/{{Asset_id}}",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"assets",
+						"{{Asset_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Asset",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"id": "82f899f9-42b8-489c-9a42-4a9555caa175"
+					}
+				}
+			],
+			"id": "9c45cbdb-bc4a-47c4-8b0b-fdd2543a594c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/assets/{{Asset_id}}",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"assets",
+						"{{Asset_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete geofences",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"id": "eb5359f7-7f56-4db4-8c5a-7d4e8c0d8905"
+					}
+				}
+			],
+			"id": "4e83da03-1204-46ee-8f46-c72f923387fa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "CSCS-Authorization-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsImZpcnN0bmFtZSI6InNzdCIsIm9yZ05hbWUiOiJTU1QiLCJyb2xlcyI6IlNTVF9BRE1JTiIsInVzZXJJZCI6MTIsIm9yZ0lkIjoiMTQiLCJsYXN0bmFtZSI6InRlc3R1c2VyIiwiZ2xvYmFsT3JnQ29kZSI6Im51bGwiLCJvcmdDb2RlIjoiU1NUIiwicGVybWlzc2lvbnMiOiIiLCJ1c2VyVHlwZSI6MCwiZXhwIjoxNjkzODA2MDEwNDQ5LCJlbWFpbCI6InNzdC10ZXN0dXNlckBjc2NzLmlvIiwidXNlcm5hbWUiOiJzc3QtdGVzdHVzZXJAY3Njcy5pbyIsInZlbmRvckNvZGVzIjoiIn0.Ms95KgzhzLY-7PfrO_gdoy37lyAnMcGr7fR7NovGPlTsI648yE7Dw6SMCBnI8XoUWSf9Ecywsit1s0u0_c-s_g",
+						"type": "default"
+					},
+					{
+						"key": "DCCODE",
+						"value": "SST",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://qa.cscs-apps.com/cam/geofences/{{Geo_id}}",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"cscs-apps",
+						"com"
+					],
+					"path": [
+						"cam",
+						"geofences",
+						"{{Geo_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "9ca59b97-fbfd-4d47-8b6f-63513d1561c3",
+			"key": "id",
+			"value": ""
+		},
+		{
+			"id": "f3c709c5-bc76-4fac-b673-44aea23ddd6b",
+			"key": "Geo_id",
+			"value": ""
+		},
+		{
+			"id": "eddbf005-1de1-4e3d-a37b-4410f03039ec",
+			"key": "Asset_id",
+			"value": ""
+		}
+	]
+}
